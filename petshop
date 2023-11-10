@@ -1,0 +1,23 @@
+class AnimalEstimacao:
+    def __init__(self, nome, raca, idade, responsavel, telefone):
+        self.nome = nome
+        self.raca = raca
+        self.idade = idade
+        self.responsavel = responsavel
+        self.telefone = telefone
+
+    def exibir_info(self):
+        print(f"Nome: {self.nome}")
+        print(f"Raça: {self.raca}")
+        print(f"Idade: {self.idade} anos")
+        print(f"Responsável: {self.responsavel}")
+        print(f"Telefone: {self.telefone}")
+
+
+# Exemplo de uso:
+
+# Criação de um objeto AnimalEstimacao
+meu_animal = AnimalEstimacao("Fido", "Cachorro", 3, "João", "123-456-7890")
+
+# Exibição das informações
+meu_animal.exibir_info()
