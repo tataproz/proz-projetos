@@ -1,0 +1,53 @@
+npx create-react-app lista-de-itens
+cd lista-de-itens
+--------------------------------------------
+// Item.js
+import React from 'react';
+
+const Item = ({ text }) => {
+  return (
+    <div>
+      <li>{text}</li>
+    </div>
+  );
+};
+
+export default Item;
+-------------------------------------------
+// ItemList.js
+import React from 'react';
+import Item from './Item';
+
+const ItemList = ({ items }) => {
+  return (
+    <div>
+      <ul>
+        {items.map((item, index) => (
+          <Item key={index} text={item} />
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ItemList;
+------------------------------------------
+// App.js
+import React from 'react';
+import './App.css';
+import ItemList from './ItemList';
+
+function App() {
+  const items = ['Item 1', 'Item 2', 'Item 3']; // Exemplo de itens
+
+  return (
+    <div className="App">
+      <h1>Lista de Itens</h1>
+      <ItemList items={items} />
+    </div>
+  );
+}
+
+export default App;
+-----------------------------------------
+npm start
